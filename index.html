@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
-        onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script><style>
+        onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+    <style>
         :root {
             --primary: #1e40af;
             --primary-dark: #1e3a8a;
@@ -47,23 +48,88 @@
         }
 
         header {
-            position: fixed; top: 0; left: 0; right: 0; height: 60px;
-            background: rgba(255,255,255,0.98); backdrop-filter: blur(20px);
-            border-bottom: 2px solid rgba(30,64,175,0.1);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
-            padding: 0 2.5rem; z-index: 100;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 2px solid rgba(30, 64, 175, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            padding: 0 2.5rem;
+            z-index: 100;
         }
-        .header-left { justify-self: start; display: flex; align-items: center; }
-        .institution-logo { height: 45px; width: auto; object-fit: contain; }
-        .header-center { justify-self: center; text-align: center; }
-        .logo { font-family: 'Outfit'; font-weight: 700; font-size: 1.1rem; color: var(--text-main); }
-        .logo-sub { display: block; font-size: 0.7rem; font-weight: 400; color: var(--text-muted); letter-spacing: 0.5px; }
-        .header-right { justify-self: end; display: flex; align-items: center; }
-        .supervisor-badge { display: flex; align-items: center; padding: 0.5rem 1rem; background: rgba(255,255,255,0.5); border: 1px solid rgba(30,64,175,0.1); border-radius: 12px; }
-        .supervisor-info { line-height: 1.3; text-align: right; }
-        .supervisor-label { font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
-        .supervisor-name { font-family: 'Outfit'; font-size: 0.95rem; font-weight: 700; color: var(--primary); }
+
+        .header-left {
+            justify-self: start;
+            display: flex;
+            align-items: center;
+        }
+
+        .institution-logo {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .header-center {
+            justify-self: center;
+            text-align: center;
+        }
+
+        .logo {
+            font-family: 'Outfit';
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+        .logo-sub {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .header-right {
+            justify-self: end;
+            display: flex;
+            align-items: center;
+        }
+
+        .supervisor-badge {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(30, 64, 175, 0.1);
+            border-radius: 12px;
+        }
+
+        .supervisor-info {
+            line-height: 1.3;
+            text-align: right;
+        }
+
+        .supervisor-label {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+        }
+
+        .supervisor-name {
+            font-family: 'Outfit';
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
 
         .slide {
             position: absolute;
@@ -1055,10 +1121,12 @@
         <div class="slide active">
             <div class="content-full text-center">
                 <h1 class="hero-title">IoMT, épilepsie et <span class="accent">Edge AI</span><br>
-                    <span style="font-size: 0.46em; font-weight: 500;">Lecture critique de Raman &amp; Velmurugan 2025</span>
+                    <span style="font-size: 0.46em; font-weight: 500;">Lecture critique de Raman &amp; Velmurugan
+                        2025</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Paper étudié : <em>An Intelligent Internet of Medical Things-Based Wearable Device for Monitoring of Neurological Disorders</em>,
+                    Paper étudié : <em>An Intelligent Internet of Medical Things-Based Wearable Device for Monitoring of
+                        Neurological Disorders</em>,
                     <em>Engineering Proceedings</em> 2025, 106, 13 <small><em>(L.25-26)</em></small>.
                 </p>
 
@@ -1112,27 +1180,45 @@
                 <div class="toc-grid">
                     <div class="toc-entry" onclick="goToSlide(2)">
                         <div class="toc-num">1</div>
-                        <div class="toc-content"><div class="toc-title">Contexte clinique</div><div class="toc-page">Slides 2-3</div></div>
+                        <div class="toc-content">
+                            <div class="toc-title">Contexte clinique</div>
+                            <div class="toc-page">Slides 2-3</div>
+                        </div>
                     </div>
                     <div class="toc-entry" onclick="goToSlide(4)">
                         <div class="toc-num green">2</div>
-                        <div class="toc-content"><div class="toc-title">État de l'art</div><div class="toc-page">Slides 4-7</div></div>
+                        <div class="toc-content">
+                            <div class="toc-title">État de l'art</div>
+                            <div class="toc-page">Slides 4-7</div>
+                        </div>
                     </div>
                     <div class="toc-entry" onclick="goToSlide(8)">
                         <div class="toc-num purple">3</div>
-                        <div class="toc-content"><div class="toc-title">Méthodologie Raman</div><div class="toc-page">Slides 8-10</div></div>
+                        <div class="toc-content">
+                            <div class="toc-title">Méthodologie Raman</div>
+                            <div class="toc-page">Slides 8-10</div>
+                        </div>
                     </div>
                     <div class="toc-entry" onclick="goToSlide(11)">
                         <div class="toc-num orange">4</div>
-                        <div class="toc-content"><div class="toc-title">Résultats et critique</div><div class="toc-page">Slides 11-13</div></div>
+                        <div class="toc-content">
+                            <div class="toc-title">Résultats et critique</div>
+                            <div class="toc-page">Slides 11-13</div>
+                        </div>
                     </div>
                     <div class="toc-entry" onclick="goToSlide(14)">
                         <div class="toc-num cyan">5</div>
-                        <div class="toc-content"><div class="toc-title">Notre travail Edge AI</div><div class="toc-page">Slides 14-17</div></div>
+                        <div class="toc-content">
+                            <div class="toc-title">Notre travail Edge AI</div>
+                            <div class="toc-page">Slides 14-17</div>
+                        </div>
                     </div>
                     <div class="toc-entry" onclick="goToSlide(18)">
                         <div class="toc-num">6</div>
-                        <div class="toc-content"><div class="toc-title">Conclusion, références, Q&amp;A</div><div class="toc-page">Slides 18-19</div></div>
+                        <div class="toc-content">
+                            <div class="toc-title">Conclusion, références, Q&amp;A</div>
+                            <div class="toc-page">Slides 18-19</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1148,37 +1234,44 @@
                 <div class="grid-3 mb-2">
                     <div class="metric-card warning">
                         <div class="metric-value">60 M</div>
-                        <div class="metric-label">personnes concernées dans le monde <small><em>(L.19-20)</em></small></div>
+                        <div class="metric-label">personnes concernées dans le monde <small><em>(L.19-20)</em></small>
+                        </div>
                     </div>
                     <div class="metric-card purple">
                         <div class="metric-value">L'électroencéphalogramme (EEG)</div>
-                        <div class="metric-label">méthode la plus fiable selon les auteurs <small><em>(L.81-83)</em></small></div>
+                        <div class="metric-label">méthode la plus fiable selon les auteurs
+                            <small><em>(L.81-83)</em></small></div>
                     </div>
                     <div class="metric-card">
                         <div class="metric-value">IoMT</div>
-                        <div class="metric-label">surveillance continue hors hôpital <small><em>(L.98-105)</em></small></div>
+                        <div class="metric-label">surveillance continue hors hôpital <small><em>(L.98-105)</em></small>
+                        </div>
                     </div>
                 </div>
                 <div class="grid-2">
                     <div class="card">
                         <div class="card-title">Le risque surveillé</div>
                         <div class="card-text">
-                            Raman décrit les crises comme des épisodes soudains pouvant entraîner blessures, accidents et mort subite inattendue.
-                            La détection nocturne est présentée comme difficile, car les crises peuvent survenir pendant le sommeil.
+                            Raman décrit les crises comme des épisodes soudains pouvant entraîner blessures, accidents
+                            et mort subite inattendue.
+                            La détection nocturne est présentée comme difficile, car les crises peuvent survenir pendant
+                            le sommeil.
                             <small><em>(L.17-21, L.67-73)</em></small>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-title">Le verrou du gold standard</div>
                         <div class="card-text">
-                            Le paper cite l'EEG, le CT, l'IRM, la SPECT, la TEP et le MEG, mais indique que le monitoring EEG continu n'est pas possible en temps réel pour l'usage ambulatoire visé.
+                            Le paper cite l'EEG, le CT, l'IRM, la SPECT, la TEP et le MEG, mais indique que le
+                            monitoring EEG continu n'est pas possible en temps réel pour l'usage ambulatoire visé.
                             <small><em>(L.75-86, L.98-101)</em></small>
                         </div>
                     </div>
                 </div>
                 <div class="info-box mt-2">
                     <div class="info-box-title">Positionnement de la problématique</div>
-                    <p>La question n'est pas de remplacer le diagnostic clinique, mais de produire une alerte portable, confortable et assez fiable pour un monitoring à domicile.</p>
+                    <p>La question n'est pas de remplacer le diagnostic clinique, mais de produire une alerte portable,
+                        confortable et assez fiable pour un monitoring à domicile.</p>
                 </div>
             </div>
         </div>
@@ -1201,7 +1294,8 @@
                         </div>
                         <div class="info-box mt-1">
                             <div class="info-box-title">Chaîne IoMT annoncée par Raman</div>
-                            <p>Le prototype combine ESP32-Cam, WiFi/Bluetooth, MicroPython et notification aux soignants en cas de crise détectée. <small><em>(L.184-191, L.245-248)</em></small></p>
+                            <p>Le prototype combine ESP32-Cam, WiFi/Bluetooth, MicroPython et notification aux soignants
+                                en cas de crise détectée. <small><em>(L.184-191, L.245-248)</em></small></p>
                         </div>
                         <div class="formula-box mt-1">
                             $\mathrm{Recall}=\frac{TP}{TP+FN}$ &nbsp;&nbsp; $\mathrm{FPR}=\frac{FP}{FP+TN}$<br>
@@ -1210,13 +1304,39 @@
                     </div>
                     <div>
                         <table>
-                            <thead><tr><th>KPI</th><th>Cible de conception</th><th>Statut chez Raman</th></tr></thead>
+                            <thead>
+                                <tr>
+                                    <th>KPI</th>
+                                    <th>Cible de conception</th>
+                                    <th>Statut chez Raman</th>
+                                </tr>
+                            </thead>
                             <tbody>
-                                <tr><td>Recall</td><td>&ge; 95 % <small>(estimation typique)</small></td><td>mesuré, mais sur données mimées</td></tr>
-                                <tr><td>FPR par heure</td><td>&lt; 1 fausse alarme/h <small>(estimation typique)</small></td><td>non précisé par les auteurs</td></tr>
-                                <tr><td>Latence</td><td>sub-seconde <small>(estimation typique)</small></td><td>non précisé par les auteurs</td></tr>
-                                <tr><td>Autonomie</td><td>24 h+ <small>(estimation typique)</small></td><td>non précisé par les auteurs</td></tr>
-                                <tr><td>Empreinte mémoire</td><td>&lt; 100 KB <small>(estimation typique)</small></td><td>non précisé par les auteurs</td></tr>
+                                <tr>
+                                    <td>Recall</td>
+                                    <td>&ge; 95 % <small>(estimation typique)</small></td>
+                                    <td>mesuré, mais sur données mimées</td>
+                                </tr>
+                                <tr>
+                                    <td>FPR par heure</td>
+                                    <td>&lt; 1 fausse alarme/h <small>(estimation typique)</small></td>
+                                    <td>non précisé par les auteurs</td>
+                                </tr>
+                                <tr>
+                                    <td>Latence</td>
+                                    <td>sub-seconde <small>(estimation typique)</small></td>
+                                    <td>non précisé par les auteurs</td>
+                                </tr>
+                                <tr>
+                                    <td>Autonomie</td>
+                                    <td>24 h+ <small>(estimation typique)</small></td>
+                                    <td>non précisé par les auteurs</td>
+                                </tr>
+                                <tr>
+                                    <td>Empreinte mémoire</td>
+                                    <td>&lt; 100 KB <small>(estimation typique)</small></td>
+                                    <td>non précisé par les auteurs</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -1234,24 +1354,29 @@
                 <div class="grid-4">
                     <div class="card">
                         <div class="card-title">1. Clinique</div>
-                        <div class="card-text">EEG, MEG, IRM, CT, PET/SPECT. Forte interprétabilité médicale, mais faible compatibilité ambulatoire. Références [5][6].</div>
+                        <div class="card-text">EEG, MEG, IRM, CT, PET/SPECT. Forte interprétabilité médicale, mais
+                            faible compatibilité ambulatoire. Références [5][6].</div>
                     </div>
                     <div class="card">
                         <div class="card-title">2. Inertiel</div>
-                        <div class="card-text">Accéléromètre, seuils ou ML léger. Pertinent pour crises convulsives à forte signature motrice. Références [11][17].</div>
+                        <div class="card-text">Accéléromètre, seuils ou ML léger. Pertinent pour crises convulsives à
+                            forte signature motrice. Références [11][17].</div>
                     </div>
                     <div class="card">
                         <div class="card-title">3. ML classique</div>
-                        <div class="card-text">Features puis DT, SVM, RF, Naive Bayes ou algorithmes comparatifs sur EEG. Références [12][13][16].</div>
+                        <div class="card-text">Features puis DT, SVM, RF, Naive Bayes ou algorithmes comparatifs sur
+                            EEG. Références [12][13][16].</div>
                     </div>
                     <div class="card">
                         <div class="card-title">4. DL-TinyML</div>
-                        <div class="card-text">CNN et réseaux compacts. Potentiel élevé, mais besoin de grands jeux de données et gestion du bruit. Référence [14].</div>
+                        <div class="card-text">CNN et réseaux compacts. Potentiel élevé, mais besoin de grands jeux de
+                            données et gestion du bruit. Référence [14].</div>
                     </div>
                 </div>
                 <div class="warning-box mt-2">
                     <div class="warning-box-title">Règle anti-hallucination appliquée</div>
-                    <p>Les performances chiffrées des travaux [11] à [17] ne sont pas détaillées dans Raman ; elles ne sont donc pas inventées ici.</p>
+                    <p>Les performances chiffrées des travaux [11] à [17] ne sont pas détaillées dans Raman ; elles ne
+                        sont donc pas inventées ici.</p>
                 </div>
             </div>
         </div>
@@ -1266,15 +1391,18 @@
                 <div class="grid-3">
                     <div class="metric-card">
                         <div class="metric-value">EEG</div>
-                        <div class="metric-label">méthode la plus fiable pour observer des patterns anormaux <small><em>(L.81-83)</em></small></div>
+                        <div class="metric-label">méthode la plus fiable pour observer des patterns anormaux
+                            <small><em>(L.81-83)</em></small></div>
                     </div>
                     <div class="metric-card purple">
                         <div class="metric-value">MEG</div>
-                        <div class="metric-label">résolution temporelle milliseconde <small><em>(L.84-86)</em></small></div>
+                        <div class="metric-label">résolution temporelle milliseconde <small><em>(L.84-86)</em></small>
+                        </div>
                     </div>
                     <div class="metric-card warning">
                         <div class="metric-value">IRM</div>
-                        <div class="metric-label">citée parmi les outils de neuroimagerie <small><em>(L.75-80)</em></small></div>
+                        <div class="metric-label">citée parmi les outils de neuroimagerie
+                            <small><em>(L.75-80)</em></small></div>
                     </div>
                 </div>
                 <div class="grid-2 mt-2">
@@ -1283,12 +1411,15 @@
                         <ul class="feature-list">
                             <li>[5] : revue clinique sur les crises épileptiques.</li>
                             <li>[6] : vue d'ensemble neuroscientifique sur crises et épilepsie.</li>
-                            <li>Raman mobilise ces références pour justifier EEG, neuroimagerie et MEG. <small><em>(L.75-86, L.422-425)</em></small></li>
+                            <li>Raman mobilise ces références pour justifier EEG, neuroimagerie et MEG.
+                                <small><em>(L.75-86, L.422-425)</em></small></li>
                         </ul>
                     </div>
                     <div class="warning-box">
                         <div class="warning-box-title">Limite pour IoMT</div>
-                        <p>Le paper reconnaît que le monitoring EEG continu n'est pas possible en temps réel dans le scénario ambulatoire visé. Les coûts, l'encombrement et la pose d'électrodes ne sont pas quantifiés par les auteurs. <small><em>(L.98-101)</em></small></p>
+                        <p>Le paper reconnaît que le monitoring EEG continu n'est pas possible en temps réel dans le
+                            scénario ambulatoire visé. Les coûts, l'encombrement et la pose d'électrodes ne sont pas
+                            quantifiés par les auteurs. <small><em>(L.98-101)</em></small></p>
                     </div>
                 </div>
             </div>
@@ -1302,17 +1433,45 @@
                     <h2 class="slide-title">ML classique et Deep Learning : apports cités, métriques absentes</h2>
                 </div>
                 <table>
-                    <thead><tr><th>Réf.</th><th>Signal / modèle</th><th>Ce que Raman rapporte</th><th>Performance chiffrée</th></tr></thead>
+                    <thead>
+                        <tr>
+                            <th>Réf.</th>
+                            <th>Signal / modèle</th>
+                            <th>Ce que Raman rapporte</th>
+                            <th>Performance chiffrée</th>
+                        </tr>
+                    </thead>
                     <tbody>
-                        <tr><td>[11] Kusmakar</td><td>Accéléromètre wearable + SVDD</td><td>Détection GTCS et distinction CPS / PNES <small><em>(L.118-123)</em></small></td><td>non précisé par les auteurs</td></tr>
-                        <tr><td>[12] Davidson</td><td>EEG + Naive Bayes + algorithme génétique</td><td>Amélioration de la classification EEG <small><em>(L.125-127)</em></small></td><td>non précisé par les auteurs</td></tr>
-                        <tr><td>[13] Roy</td><td>EEG + benchmark ML</td><td>Comparaison d'algorithmes pour types de crises <small><em>(L.127-129)</em></small></td><td>non précisé par les auteurs</td></tr>
-                        <tr><td>[14] Liu</td><td>CNN multi-biosignal</td><td>Besoin d'un grand dataset et bruit du signal <small><em>(L.131-134)</em></small></td><td>non précisé par les auteurs</td></tr>
+                        <tr>
+                            <td>[11] Kusmakar</td>
+                            <td>Accéléromètre wearable + SVDD</td>
+                            <td>Détection GTCS et distinction CPS / PNES <small><em>(L.118-123)</em></small></td>
+                            <td>non précisé par les auteurs</td>
+                        </tr>
+                        <tr>
+                            <td>[12] Davidson</td>
+                            <td>EEG + Naive Bayes + algorithme génétique</td>
+                            <td>Amélioration de la classification EEG <small><em>(L.125-127)</em></small></td>
+                            <td>non précisé par les auteurs</td>
+                        </tr>
+                        <tr>
+                            <td>[13] Roy</td>
+                            <td>EEG + benchmark ML</td>
+                            <td>Comparaison d'algorithmes pour types de crises <small><em>(L.127-129)</em></small></td>
+                            <td>non précisé par les auteurs</td>
+                        </tr>
+                        <tr>
+                            <td>[14] Liu</td>
+                            <td>CNN multi-biosignal</td>
+                            <td>Besoin d'un grand dataset et bruit du signal <small><em>(L.131-134)</em></small></td>
+                            <td>non précisé par les auteurs</td>
+                        </tr>
                     </tbody>
                 </table>
                 <div class="info-box mt-2">
                     <div class="info-box-title">Lecture SOTA</div>
-                    <p>Raman se positionne surtout comme démonstrateur Edge complet ; le paper ne fournit pas de comparaison numérique détaillée avec les travaux cités.</p>
+                    <p>Raman se positionne surtout comme démonstrateur Edge complet ; le paper ne fournit pas de
+                        comparaison numérique détaillée avec les travaux cités.</p>
                 </div>
             </div>
         </div>
@@ -1327,19 +1486,43 @@
                 <div class="grid-2">
                     <div>
                         <table>
-                            <thead><tr><th>Famille</th><th>Force</th><th>Limite pour l'Edge</th></tr></thead>
+                            <thead>
+                                <tr>
+                                    <th>Famille</th>
+                                    <th>Force</th>
+                                    <th>Limite pour l'Edge</th>
+                                </tr>
+                            </thead>
                             <tbody>
-                                <tr><td>Clinique EEG/MEG</td><td>signal proche du mécanisme neurologique</td><td>ambulatoire difficile <small><em>(L.98-101)</em></small></td></tr>
-                                <tr><td>Inertiel wearable</td><td>capteur léger, compatible MCU</td><td>crises non motrices moins couvertes, non quantifié par Raman</td></tr>
-                                <tr><td>ML classique</td><td>features explicables, coût réduit</td><td>généralisation inter-patients fragile, non quantifiée</td></tr>
-                                <tr><td>DL-TinyML</td><td>apprentissage de motifs complexes</td><td>grand dataset et bruit signalés pour CNN <small><em>(L.131-134)</em></small></td></tr>
+                                <tr>
+                                    <td>Clinique EEG/MEG</td>
+                                    <td>signal proche du mécanisme neurologique</td>
+                                    <td>ambulatoire difficile <small><em>(L.98-101)</em></small></td>
+                                </tr>
+                                <tr>
+                                    <td>Inertiel wearable</td>
+                                    <td>capteur léger, compatible MCU</td>
+                                    <td>crises non motrices moins couvertes, non quantifié par Raman</td>
+                                </tr>
+                                <tr>
+                                    <td>ML classique</td>
+                                    <td>features explicables, coût réduit</td>
+                                    <td>généralisation inter-patients fragile, non quantifiée</td>
+                                </tr>
+                                <tr>
+                                    <td>DL-TinyML</td>
+                                    <td>apprentissage de motifs complexes</td>
+                                    <td>grand dataset et bruit signalés pour CNN <small><em>(L.131-134)</em></small>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                     <div class="warning-box">
                         <div class="warning-box-title">Verrous à retenir</div>
                         <ul class="feature-list">
-                            <li>Absence de patients épileptiques réels dans Raman. <small><em>(L.160-165)</em></small></li>
+                            <li>Absence de patients épileptiques réels dans Raman. <small><em>(L.160-165)</em></small>
+                            </li>
                             <li>Faux positifs par heure non précisés par les auteurs.</li>
                             <li>Budget mémoire, latence et énergie non précisés par les auteurs.</li>
                             <li>Domain shift iPhone vers LSM9DS1 non quantifié.</li>
@@ -1360,7 +1543,8 @@
                 <div class="grid-4">
                     <div class="metric-card purple">
                         <div class="metric-value">9-DoF</div>
-                        <div class="metric-label">LSM9DS1 : accéléromètre, gyroscope, magnétomètre <small><em>(L.175-181)</em></small></div>
+                        <div class="metric-label">LSM9DS1 : accéléromètre, gyroscope, magnétomètre
+                            <small><em>(L.175-181)</em></small></div>
                     </div>
                     <div class="metric-card">
                         <div class="metric-value">160 MHz</div>
@@ -1368,7 +1552,8 @@
                     </div>
                     <div class="metric-card warning">
                         <div class="metric-value">520 KB</div>
-                        <div class="metric-label">SRAM intégrée, plus PSRAM externe <small><em>(L.186-188)</em></small></div>
+                        <div class="metric-label">SRAM intégrée, plus PSRAM externe <small><em>(L.186-188)</em></small>
+                        </div>
                     </div>
                     <div class="metric-card success">
                         <div class="metric-value">1500 mAh</div>
@@ -1385,8 +1570,16 @@
                     <div class="dataflow-box">WiFi / BLE</div>
                 </div>
                 <div class="grid-2 mt-1">
-                    <div class="info-box"><div class="info-box-title">Port corporel</div><p>Le dispositif est fixé sur la zone tibiale de la jambe inférieure, avec boîtier et sangle. <small><em>(L.154-155, L.206-208)</em></small></p></div>
-                    <div class="info-box"><div class="info-box-title">Recharge</div><p>Le module TP4056 est cité pour la charge d'une cellule LiPo 3,7 V avec protection court-circuit. <small><em>(L.200-202)</em></small></p></div>
+                    <div class="info-box">
+                        <div class="info-box-title">Port corporel</div>
+                        <p>Le dispositif est fixé sur la zone tibiale de la jambe inférieure, avec boîtier et sangle.
+                            <small><em>(L.154-155, L.206-208)</em></small></p>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-box-title">Recharge</div>
+                        <p>Le module TP4056 est cité pour la charge d'une cellule LiPo 3,7 V avec protection
+                            court-circuit. <small><em>(L.200-202)</em></small></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1412,20 +1605,30 @@
                 <div class="grid-3 mt-2">
                     <div class="card">
                         <div class="card-title">Signal et fenêtrage</div>
-                        <div class="card-text">Accélération et gyroscope à 50 Hz ; fenêtres fixes de 2,56 s ; 50 % d'overlap ; 128 lectures par fenêtre. <small><em>(L.223-229)</em></small></div>
+                        <div class="card-text">Accélération et gyroscope à 50 Hz ; fenêtres fixes de 2,56 s ; 50 %
+                            d'overlap ; 128 lectures par fenêtre. <small><em>(L.223-229)</em></small></div>
                     </div>
                     <div class="card">
                         <div class="card-title">Prétraitement</div>
-                        <div class="card-text">Filtres de bruit puis Butterworth passe-bas pour séparer gravité et accélération corporelle. <small><em>(L.231-232)</em></small></div>
+                        <div class="card-text">Filtres de bruit puis Butterworth passe-bas pour séparer gravité et
+                            accélération corporelle. <small><em>(L.231-232)</em></small></div>
                     </div>
                     <div class="card">
                         <div class="card-title">Features</div>
-                        <div class="card-text">Variance, skewness, MFL, entropie spectrale, fréquence moyenne, fréquence médiane. <small><em>(L.233-235)</em></small></div>
+                        <div class="card-text">Variance, skewness, MFL, entropie spectrale, fréquence moyenne, fréquence
+                            médiane. <small><em>(L.233-235)</em></small></div>
                     </div>
                 </div>
                 <div class="grid-2 mt-2">
-                    <div class="info-box"><div class="info-box-title">Validation rapportée</div><p>Split 80/20 : 240 signaux entraînement, 60 test, dont 30 normaux et 30 seizure-mimicking. <small><em>(L.256-261)</em></small></p></div>
-                    <div class="info-box"><div class="info-box-title">Validation croisée</div><p>k-fold avec k = 5 pour DT, RF et SVM. <small><em>(L.303-305)</em></small></p></div>
+                    <div class="info-box">
+                        <div class="info-box-title">Validation rapportée</div>
+                        <p>Split 80/20 : 240 signaux entraînement, 60 test, dont 30 normaux et 30 seizure-mimicking.
+                            <small><em>(L.256-261)</em></small></p>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-box-title">Validation croisée</div>
+                        <p>k-fold avec k = 5 pour DT, RF et SVM. <small><em>(L.303-305)</em></small></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1441,8 +1644,10 @@
                     <div class="comparison-col">
                         <h3 class="card-title">Domaine d'entraînement</h3>
                         <ul class="feature-list">
-                            <li>Apple iPhone 11 utilisé pour acquérir les signaux. <small><em>(L.253-256)</em></small></li>
-                            <li>Volontaires sains, activités mimées sous supervision médicale. <small><em>(L.160-165)</em></small></li>
+                            <li>Apple iPhone 11 utilisé pour acquérir les signaux. <small><em>(L.253-256)</em></small>
+                            </li>
+                            <li>Volontaires sains, activités mimées sous supervision médicale.
+                                <small><em>(L.160-165)</em></small></li>
                             <li>CSV, accéléromètre et gyroscope du smartphone. <small><em>(L.253-256)</em></small></li>
                         </ul>
                     </div>
@@ -1451,14 +1656,16 @@
                         <h3 class="card-title">Domaine de déploiement</h3>
                         <ul class="feature-list">
                             <li>LSM9DS1 décrit comme capteur du wearable. <small><em>(L.175-181)</em></small></li>
-                            <li>ESP32-Cam reçoit les valeurs capteur et prédit les crises. <small><em>(L.184-191)</em></small></li>
+                            <li>ESP32-Cam reçoit les valeurs capteur et prédit les crises.
+                                <small><em>(L.184-191)</em></small></li>
                             <li>RF codé en MicroPython dans le dispositif IoMT. <small><em>(L.381-382)</em></small></li>
                         </ul>
                     </div>
                 </div>
                 <div class="warning-box mt-2">
                     <div class="warning-box-title">Conséquence méthodologique</div>
-                    <p>Le transfert entre capteur smartphone et LSM9DS1 tibial n'est ni mesuré, ni validé, ni discuté. La validité externe du prototype reste donc non démontrée par les auteurs.</p>
+                    <p>Le transfert entre capteur smartphone et LSM9DS1 tibial n'est ni mesuré, ni validé, ni discuté.
+                        La validité externe du prototype reste donc non démontrée par les auteurs.</p>
                 </div>
             </div>
         </div>
@@ -1471,16 +1678,51 @@
                     <h2 class="slide-title">Table 1 reproduite : RF gagne le recall, pas le FPR</h2>
                 </div>
                 <table>
-                    <thead><tr><th>Modèle</th><th>Accuracy</th><th>Precision</th><th>Recall</th><th>FPR</th><th>Lecture critique</th></tr></thead>
+                    <thead>
+                        <tr>
+                            <th>Modèle</th>
+                            <th>Accuracy</th>
+                            <th>Precision</th>
+                            <th>Recall</th>
+                            <th>FPR</th>
+                            <th>Lecture critique</th>
+                        </tr>
+                    </thead>
                     <tbody>
-                        <tr><td>Decision Trees</td><td>85 %</td><td>86 %</td><td>83 %</td><td>0,13</td><td>Simple, mais recall plus faible</td></tr>
-                        <tr class="best"><td>Random Forest</td><td class="highlight">95 %</td><td>93 %</td><td class="highlight">100 %</td><td>0,15</td><td>Meilleur recall, FPR le plus élevé</td></tr>
-                        <tr><td>SVM</td><td>90 %</td><td>90,9 %</td><td>90,9 %</td><td class="highlight">0,11</td><td>FPR le plus bas</td></tr>
+                        <tr>
+                            <td>Decision Trees</td>
+                            <td>85 %</td>
+                            <td>86 %</td>
+                            <td>83 %</td>
+                            <td>0,13</td>
+                            <td>Simple, mais recall plus faible</td>
+                        </tr>
+                        <tr class="best">
+                            <td>Random Forest</td>
+                            <td class="highlight">95 %</td>
+                            <td>93 %</td>
+                            <td class="highlight">100 %</td>
+                            <td>0,15</td>
+                            <td>Meilleur recall, FPR le plus élevé</td>
+                        </tr>
+                        <tr>
+                            <td>SVM</td>
+                            <td>90 %</td>
+                            <td>90,9 %</td>
+                            <td>90,9 %</td>
+                            <td class="highlight">0,11</td>
+                            <td>FPR le plus bas</td>
+                        </tr>
                     </tbody>
                 </table>
                 <div class="grid-2 mt-2">
-                    <div class="info-box"><div class="info-box-title">Source tableau</div><p>Toutes les valeurs de Table 1 proviennent du paper et de l'audit de lecture critique. <small><em>(L.292-300, L.340-356)</em></small></p></div>
-                    <div class="formula-box">$\mathrm{FPR}=0{,}15$ pour le RF<br><small><em>Le meilleur recall n'implique pas le meilleur taux de faux positifs.</em></small></div>
+                    <div class="info-box">
+                        <div class="info-box-title">Source tableau</div>
+                        <p>Toutes les valeurs de Table 1 proviennent du paper et de l'audit de lecture critique.
+                            <small><em>(L.292-300, L.340-356)</em></small></p>
+                    </div>
+                    <div class="formula-box">$\mathrm{FPR}=0{,}15$ pour le RF<br><small><em>Le meilleur recall
+                                n'implique pas le meilleur taux de faux positifs.</em></small></div>
                 </div>
             </div>
         </div>
@@ -1495,24 +1737,30 @@
                 <div class="grid-2">
                     <div class="warning-box">
                         <div class="warning-box-title">1. Capteur : trois versions</div>
-                        <p>MPU6500 dans l'abstract, LSM9DS1 dans la méthodologie, iPhone 11 dans les résultats. <small><em>(L.26-27, L.175-176, L.253-256)</em></small></p>
+                        <p>MPU6500 dans l'abstract, LSM9DS1 dans la méthodologie, iPhone 11 dans les résultats.
+                            <small><em>(L.26-27, L.175-176, L.253-256)</em></small></p>
                     </div>
                     <div class="warning-box">
                         <div class="warning-box-title">2. FPR inférieur à 4 %</div>
-                        <p>L'abstract annonce &lt; 4 %, alors que la Table 1 donne au mieux 0,11, soit 11 %. <small><em>(L.38-39, L.292-300)</em></small></p>
+                        <p>L'abstract annonce &lt; 4 %, alors que la Table 1 donne au mieux 0,11, soit 11 %.
+                            <small><em>(L.38-39, L.292-300)</em></small></p>
                     </div>
                     <div class="warning-box">
                         <div class="warning-box-title">3. Domain shift non traité</div>
-                        <p>Les données d'entraînement viennent d'un iPhone ; le déploiement vise ESP32 + LSM9DS1. Aucune expérience de transfert n'est rapportée. <small><em>(L.253-256, L.175-181, L.381-382)</em></small></p>
+                        <p>Les données d'entraînement viennent d'un iPhone ; le déploiement vise ESP32 + LSM9DS1. Aucune
+                            expérience de transfert n'est rapportée. <small><em>(L.253-256, L.175-181,
+                                    L.381-382)</em></small></p>
                     </div>
                     <div class="warning-box">
                         <div class="warning-box-title">4. RF « without any FPR »</div>
-                        <p>La discussion affirme que le RF détecte sans FPR, alors que le RF a FPR = 0,15, le plus élevé des trois modèles. <small><em>(L.347-348, L.355-357)</em></small></p>
+                        <p>La discussion affirme que le RF détecte sans FPR, alors que le RF a FPR = 0,15, le plus élevé
+                            des trois modèles. <small><em>(L.347-348, L.355-357)</em></small></p>
                     </div>
                 </div>
                 <div class="info-box mt-2">
                     <div class="info-box-title">Message de jury</div>
-                    <p>La critique ne porte pas sur l'idée IoMT, mais sur la cohérence expérimentale nécessaire avant toute prétention clinique.</p>
+                    <p>La critique ne porte pas sur l'idée IoMT, mais sur la cohérence expérimentale nécessaire avant
+                        toute prétention clinique.</p>
                 </div>
             </div>
         </div>
@@ -1525,23 +1773,36 @@
                     <h2 class="slide-title">Limites méthodologiques : ce qui manque pour conclure</h2>
                 </div>
                 <div class="grid-3">
-                    <div class="metric-card warning"><div class="metric-value">300</div><div class="metric-label">signaux au total <small><em>(L.256-261)</em></small></div></div>
-                    <div class="metric-card warning"><div class="metric-value">30</div><div class="metric-label">positifs dans le test <small><em>(L.260-261)</em></small></div></div>
-                    <div class="metric-card purple"><div class="metric-value">IRB</div><div class="metric-label">déclaré Not applicable <small><em>(L.397-399)</em></small></div></div>
+                    <div class="metric-card warning">
+                        <div class="metric-value">300</div>
+                        <div class="metric-label">signaux au total <small><em>(L.256-261)</em></small></div>
+                    </div>
+                    <div class="metric-card warning">
+                        <div class="metric-value">30</div>
+                        <div class="metric-label">positifs dans le test <small><em>(L.260-261)</em></small></div>
+                    </div>
+                    <div class="metric-card purple">
+                        <div class="metric-value">IRB</div>
+                        <div class="metric-label">déclaré Not applicable <small><em>(L.397-399)</em></small></div>
+                    </div>
                 </div>
                 <div class="grid-2 mt-2">
                     <div class="card">
                         <div class="card-title">Échantillon et population</div>
                         <ul class="feature-list">
-                            <li>150 normaux et 150 seizure-mimicking, pas de patients épileptiques réels. <small><em>(L.256-261, L.160-165)</em></small></li>
-                            <li>Pas d'intervalle de confiance, pas de p-value, pas d'analyse de puissance dans le paper.</li>
-                            <li>Données disponibles sur demande, pas de dépôt public cité. <small><em>(L.401-402)</em></small></li>
+                            <li>150 normaux et 150 seizure-mimicking, pas de patients épileptiques réels.
+                                <small><em>(L.256-261, L.160-165)</em></small></li>
+                            <li>Pas d'intervalle de confiance, pas de p-value, pas d'analyse de puissance dans le paper.
+                            </li>
+                            <li>Données disponibles sur demande, pas de dépôt public cité.
+                                <small><em>(L.401-402)</em></small></li>
                         </ul>
                     </div>
                     <div class="card">
                         <div class="card-title">Métriques Edge et clinique absentes</div>
                         <ul class="feature-list">
-                            <li>F1-score, spécificité, AUC-ROC et matrice de confusion complète : non précisés par les auteurs.</li>
+                            <li>F1-score, spécificité, AUC-ROC et matrice de confusion complète : non précisés par les
+                                auteurs.</li>
                             <li>Latence d'inférence : non précisée par les auteurs.</li>
                             <li>Autonomie et consommation énergétique : non précisées par les auteurs.</li>
                             <li>Empreinte RAM du modèle RF : non précisée par les auteurs.</li>
@@ -1559,24 +1820,41 @@
                     <h2 class="slide-title">SeizeIT2 : test patient-réaliste en Leave-One-Subject-Out</h2>
                 </div>
                 <div class="grid-4">
-                    <div class="metric-card"><div class="metric-value">6</div><div class="metric-label">sujets SeizeIT2</div></div>
-                    <div class="metric-card warning"><div class="metric-value">33 925</div><div class="metric-label">fenêtres</div></div>
-                    <div class="metric-card purple"><div class="metric-value">893</div><div class="metric-label">fenêtres positives</div></div>
-                    <div class="metric-card success"><div class="metric-value">80</div><div class="metric-label">features</div></div>
+                    <div class="metric-card">
+                        <div class="metric-value">6</div>
+                        <div class="metric-label">sujets SeizeIT2</div>
+                    </div>
+                    <div class="metric-card warning">
+                        <div class="metric-value">33 925</div>
+                        <div class="metric-label">fenêtres</div>
+                    </div>
+                    <div class="metric-card purple">
+                        <div class="metric-value">893</div>
+                        <div class="metric-label">fenêtres positives</div>
+                    </div>
+                    <div class="metric-card success">
+                        <div class="metric-value">80</div>
+                        <div class="metric-label">features</div>
+                    </div>
                 </div>
                 <div class="grid-2 mt-2">
                     <div class="card">
                         <div class="card-title">Dataset et validation</div>
-                        <div class="card-text">OpenNeuro ds005873, SeizeIT2, validation LOSO : un sujet est tenu hors entraînement à chaque fold. <strong>(mesure interne, repo iot-edge-ai-seizeit2)</strong></div>
+                        <div class="card-text">OpenNeuro ds005873, SeizeIT2, validation LOSO : un sujet est tenu hors
+                            entraînement à chaque fold. <strong>(mesure interne, repo iot-edge-ai-seizeit2)</strong>
+                        </div>
                     </div>
                     <div class="card">
                         <div class="card-title">Pipeline aligné Edge</div>
-                        <div class="card-text">Butterworth low-pass 20 Hz, resampling 50 Hz, fenêtres 2,56 s, overlap 50 %, 2 canaux EEG et 6 canaux MOV. <strong>(mesure interne, repo iot-edge-ai-seizeit2)</strong></div>
+                        <div class="card-text">Butterworth low-pass 20 Hz, resampling 50 Hz, fenêtres 2,56 s, overlap 50
+                            %, 2 canaux EEG et 6 canaux MOV. <strong>(mesure interne, repo
+                                iot-edge-ai-seizeit2)</strong></div>
                     </div>
                 </div>
                 <div class="info-box mt-2">
                     <div class="info-box-title">Pourquoi LOSO ?</div>
-                    <p>LOSO mesure la généralisation inter-sujet ; c'est précisément le verrou absent du protocole Raman fondé sur mouvements mimés.</p>
+                    <p>LOSO mesure la généralisation inter-sujet ; c'est précisément le verrou absent du protocole Raman
+                        fondé sur mouvements mimés.</p>
                 </div>
             </div>
         </div>
@@ -1589,18 +1867,63 @@
                     <h2 class="slide-title">Résultats LOSO : l'accuracy ne suffit pas</h2>
                 </div>
                 <table>
-                    <thead><tr><th>Modèle</th><th>Accuracy (pooled)</th><th>Recall (pooled)</th><th>TP / N_pos</th><th>FPR (pooled)</th><th>AUC (macro)</th></tr></thead>
+                    <thead>
+                        <tr>
+                            <th>Modèle</th>
+                            <th>Accuracy (pooled)</th>
+                            <th>Recall (pooled)</th>
+                            <th>TP / N_pos</th>
+                            <th>FPR (pooled)</th>
+                            <th>AUC (macro)</th>
+                        </tr>
+                    </thead>
                     <tbody>
-                        <tr><td>DT</td><td>0,945</td><td class="highlight">0,110</td><td>98 / 893</td><td>0,033</td><td>0,561</td></tr>
-                        <tr><td class="best">MLP</td><td>0,916</td><td class="highlight">0,087</td><td>78 / 893</td><td>0,062</td><td>0,584</td></tr>
-                        <tr><td>SVM RBF</td><td>0,962</td><td>0,065</td><td>58 / 893</td><td>0,013</td><td>0,493</td></tr>
-                        <tr><td>RF</td><td>0,974</td><td>0,033</td><td>29 / 893</td><td>0,001</td><td>0,801</td></tr>
+                        <tr>
+                            <td>DT</td>
+                            <td>0,945</td>
+                            <td class="highlight">0,110</td>
+                            <td>98 / 893</td>
+                            <td>0,033</td>
+                            <td>0,561</td>
+                        </tr>
+                        <tr>
+                            <td class="best">MLP</td>
+                            <td>0,916</td>
+                            <td class="highlight">0,087</td>
+                            <td>78 / 893</td>
+                            <td>0,062</td>
+                            <td>0,584</td>
+                        </tr>
+                        <tr>
+                            <td>SVM RBF</td>
+                            <td>0,962</td>
+                            <td>0,065</td>
+                            <td>58 / 893</td>
+                            <td>0,013</td>
+                            <td>0,493</td>
+                        </tr>
+                        <tr>
+                            <td>RF</td>
+                            <td>0,974</td>
+                            <td>0,033</td>
+                            <td>29 / 893</td>
+                            <td>0,001</td>
+                            <td>0,801</td>
+                        </tr>
                     </tbody>
                 </table>
-                <p class="card-text" style="font-size:0.78rem;margin-top:0.5rem;">Note méthodologique — recall pooled = ΣTP / ΣN_positives sur les 6 folds LOSO. La macro-moyenne par sujet (RF 0,089 ± 0,146 ; MLP 0,075 ± 0,055) est dominée par un seul fold à 39,7 % et n'est pas la sensibilité globale du système. Correction post-feedback Mme Manel.</p>
+                <p class="card-text" style="font-size:0.78rem;margin-top:0.5rem;">Note méthodologique — recall pooled =
+                    ΣTP / (ΣTP + ΣFN) sur les 6 folds LOSO. Strictement équivalent à la définition
+                    standard Recall = TP / (TP + FN), avec TP et FN sommés sur tous les folds avant
+                    division (et ΣTP + ΣFN = ΣN_positives par définition). La macro-moyenne par sujet
+                    (RF 0,089 ± 0,146 ; MLP 0,075 ± 0,055) est dominée par un seul fold à 39,7 % et
+                    n'est pas la sensibilité globale du système. Correction post-feedback Mme Manel BEN ROMDHANE.</p>
                 <div class="warning-box mt-2">
                     <div class="warning-box-title">Constat E5</div>
-                    <p>Sur 893 fenêtres de crise réelles, le RF n'en détecte que 29 (recall 3,3 %). Son accuracy 97,4 % égale le baseline trivial « tout négatif » (97,37 %) : le modèle se comporte comme un classifieur idiot. Le MLP, malgré sa taille 56× plus petite, capte presque 3× plus de crises (78 / 893 = 8,7 %). <strong>(mesure interne, repo iot-edge-ai-seizure-detection)</strong></p>
+                    <p>Sur 893 fenêtres de crise réelles, le RF n'en détecte que 29 (recall 3,3 %). Son accuracy 97,4 %
+                        égale le baseline trivial « tout négatif » (97,37 %) : le modèle se comporte comme un
+                        classifieur idiot. Le MLP, malgré sa taille 56× plus petite, capte presque 3× plus de crises (78
+                        / 893 = 8,7 %). <strong>(mesure interne, repo iot-edge-ai-seizure-detection)</strong></p>
                 </div>
             </div>
         </div>
@@ -1614,17 +1937,49 @@
                 </div>
                 <div class="info-box mb-2">
                     <div class="info-box-title">Hypothèse de calcul</div>
-                    <p>ESP32 : 160 MHz, 520 KB SRAM, 70 mW. Estimation analytique uniquement, pas une mesure hardware. <strong>(mesure interne, repo iot-edge-ai-seizeit2)</strong></p>
+                    <p>ESP32 : 160 MHz, 520 KB SRAM, 70 mW. Estimation analytique uniquement, pas une mesure hardware.
+                        <strong>(mesure interne, repo iot-edge-ai-seizeit2)</strong></p>
                 </div>
                 <table>
-                    <thead><tr><th>Modèle embarqué</th><th>RAM estimée</th><th>% SRAM</th><th>Latence</th><th>Énergie</th><th>Statut</th></tr></thead>
+                    <thead>
+                        <tr>
+                            <th>Modèle embarqué</th>
+                            <th>RAM estimée</th>
+                            <th>% SRAM</th>
+                            <th>Latence</th>
+                            <th>Énergie</th>
+                            <th>Statut</th>
+                        </tr>
+                    </thead>
                     <tbody>
-                        <tr><td>RF FP32</td><td>1427 KB</td><td>274 %</td><td>non retenu</td><td>non retenu</td><td>non viable</td></tr>
-                        <tr class="best"><td>RF INT8</td><td>357 KB</td><td>68,66 %</td><td>18,47 µs</td><td>1,29 µJ</td><td>viable mais lourd</td></tr>
-                        <tr><td>MLP INT8</td><td>6,439 KB</td><td>1,24 %</td><td>19,3 µs</td><td>1,35 µJ</td><td>viable et compact</td></tr>
+                        <tr>
+                            <td>RF FP32</td>
+                            <td>1427 KB</td>
+                            <td>274 %</td>
+                            <td>non retenu</td>
+                            <td>non retenu</td>
+                            <td>non viable</td>
+                        </tr>
+                        <tr class="best">
+                            <td>RF INT8</td>
+                            <td>357 KB</td>
+                            <td>68,66 %</td>
+                            <td>18,47 µs</td>
+                            <td>1,29 µJ</td>
+                            <td>viable mais lourd</td>
+                        </tr>
+                        <tr>
+                            <td>MLP INT8</td>
+                            <td>6,439 KB</td>
+                            <td>1,24 %</td>
+                            <td>19,3 µs</td>
+                            <td>1,35 µJ</td>
+                            <td>viable et compact</td>
+                        </tr>
                     </tbody>
                 </table>
-                <div class="formula-box mt-2">MLP INT8 ≈ 56× plus léger que RF INT8<br><small><strong>(mesure interne, repo iot-edge-ai-seizeit2)</strong></small></div>
+                <div class="formula-box mt-2">MLP INT8 ≈ 56× plus léger que RF INT8<br><small><strong>(mesure interne,
+                            repo iot-edge-ai-seizeit2)</strong></small></div>
             </div>
         </div>
 
@@ -1638,24 +1993,38 @@
                 <div class="comparison-row">
                     <div class="comparison-col">
                         <h3 class="card-title">Raman 2025</h3>
-                        <div class="metric-card success mt-1"><div class="metric-value">100 %</div><div class="metric-label">recall RF sur 30 positifs mimés <small><em>(L.260-261, L.292-300)</em></small></div></div>
-                        <p class="card-text mt-1">Contexte : volontaires sains et signaux mimant des crises, avec acquisition iPhone 11.</p>
+                        <div class="metric-card success mt-1">
+                            <div class="metric-value">100 %</div>
+                            <div class="metric-label">recall RF sur 30 positifs mimés <small><em>(L.260-261,
+                                        L.292-300)</em></small></div>
+                        </div>
+                        <p class="card-text mt-1">Contexte : volontaires sains et signaux mimant des crises, avec
+                            acquisition iPhone 11.</p>
                     </div>
                     <div class="comparison-col vs">VS</div>
                     <div class="comparison-col">
                         <h3 class="card-title">Notre validation LOSO</h3>
-                        <div class="metric-card warning mt-1"><div class="metric-value">3,25 %</div><div class="metric-label">recall pooled RF sur SeizeIT2 patients réels (29 crises détectées sur 893)</div></div>
-                        <p class="card-text mt-1"><strong>(mesure interne, repo iot-edge-ai-seizure-detection)</strong></p>
+                        <div class="metric-card warning mt-1">
+                            <div class="metric-value">3,25 %</div>
+                            <div class="metric-label">recall pooled RF sur SeizeIT2 patients réels (29 crises détectées
+                                sur 893)</div>
+                        </div>
+                        <p class="card-text mt-1"><strong>(mesure interne, repo iot-edge-ai-seizure-detection)</strong>
+                        </p>
                     </div>
                 </div>
                 <div class="grid-2 mt-2">
                     <div class="info-box">
                         <div class="info-box-title">Compromis RF</div>
-                        <p>RF INT8 reste possible en SRAM, mais consomme 357 KB, soit 68,66 % de la SRAM estimée. <strong>(mesure interne, repo iot-edge-ai-seizeit2)</strong></p>
+                        <p>RF INT8 reste possible en SRAM, mais consomme 357 KB, soit 68,66 % de la SRAM estimée.
+                            <strong>(mesure interne, repo iot-edge-ai-seizeit2)</strong></p>
                     </div>
                     <div class="success-box">
                         <div class="success-box-title">Compromis MLP</div>
-                        <p>MLP INT8 est environ 56× plus léger que RF INT8, et son recall pooled (0,087, 78 / 893) reste supérieur à celui du RF pooled (0,033) : il résout la mémoire et améliore la sensibilité, sans atteindre l'utilité clinique. <strong>(mesure interne, repo iot-edge-ai-seizure-detection)</strong></p>
+                        <p>MLP INT8 est environ 56× plus léger que RF INT8, et son recall pooled (0,087, 78 / 893) reste
+                            supérieur à celui du RF pooled (0,033) : il résout la mémoire et améliore la sensibilité,
+                            sans atteindre l'utilité clinique. <strong>(mesure interne, repo
+                                iot-edge-ai-seizure-detection)</strong></p>
                     </div>
                 </div>
             </div>
@@ -1672,15 +2041,19 @@
                     <div class="card">
                         <div class="card-title">Ce que Raman apporte</div>
                         <ul class="feature-list">
-                            <li>Un prototype IoMT cohérent comme démonstrateur pédagogique : ESP32, IMU, WiFi, MicroPython. <small><em>(L.184-191)</em></small></li>
-                            <li>Une chaîne complète : acquisition, features, DT/SVM/RF, comparaison, déploiement. <small><em>(L.216-236, L.292-300)</em></small></li>
-                            <li>Un résultat RF fort sur données mimées : 95 % accuracy et 100 % recall. <small><em>(L.340-348)</em></small></li>
+                            <li>Un prototype IoMT cohérent comme démonstrateur pédagogique : ESP32, IMU, WiFi,
+                                MicroPython. <small><em>(L.184-191)</em></small></li>
+                            <li>Une chaîne complète : acquisition, features, DT/SVM/RF, comparaison, déploiement.
+                                <small><em>(L.216-236, L.292-300)</em></small></li>
+                            <li>Un résultat RF fort sur données mimées : 95 % accuracy et 100 % recall.
+                                <small><em>(L.340-348)</em></small></li>
                         </ul>
                     </div>
                     <div class="warning-box">
                         <div class="warning-box-title">Ce qui empêche une conclusion clinique</div>
                         <ul class="feature-list">
-                            <li>Absence de patients épileptiques réels dans le protocole Raman. <small><em>(L.160-165)</em></small></li>
+                            <li>Absence de patients épileptiques réels dans le protocole Raman.
+                                <small><em>(L.160-165)</em></small></li>
                             <li>Domain shift iPhone vers LSM9DS1 non quantifié.</li>
                             <li>FPR abstract contredit par Table 1. <small><em>(L.38-39, L.292-300)</em></small></li>
                             <li>Latence, énergie, autonomie et RAM modèle non précisées par les auteurs.</li>
@@ -1689,7 +2062,8 @@
                 </div>
                 <div class="success-box mt-2">
                     <div class="success-box-title">Recommandations</div>
-                    <p>Reprendre l'acquisition avec le capteur réellement déployé, valider en LOSO sur patients réels, publier F1/AUC/matrice de confusion et mesurer RAM, latence et énergie sur hardware.</p>
+                    <p>Reprendre l'acquisition avec le capteur réellement déployé, valider en LOSO sur patients réels,
+                        publier F1/AUC/matrice de confusion et mesurer RAM, latence et énergie sur hardware.</p>
                 </div>
             </div>
         </div>
@@ -1721,7 +2095,8 @@
                         <p style="font-size: 0.68rem; line-height: 1.35; color: var(--text-muted);">
                             [10] Amengual-Gual 2019, patterns of epileptic seizure occurrence.<br>
                             [11] Kusmakar 2018, convulsive seizure detection using wearable accelerometer.<br>
-                            [12] Davidson 2022, epileptic seizure classification using combined labels and genetic algorithm.<br>
+                            [12] Davidson 2022, epileptic seizure classification using combined labels and genetic
+                            algorithm.<br>
                             [13] Roy 2020, seizure type classification using EEG and ML.<br>
                             [14] Liu 2020, epileptic seizure detection using CNN multi-biosignal.<br>
                             [15] Zabler 2024, seizure self-reporting with an app diary.<br>
@@ -1731,9 +2106,21 @@
                     </div>
                 </div>
                 <div class="grid-3 mt-2">
-                    <div class="info-box" style="padding: 0.75rem 0.9rem;"><div class="info-box-title">Source refs</div><p style="font-size: 0.78rem;">Les 17 références correspondent à la section F de la lecture critique et aux lignes bibliographiques du paper. <small><em>(L.408-464)</em></small></p></div>
-                    <div class="success-box" style="padding: 0.75rem 0.9rem;"><div class="success-box-title">Trace IA</div><p style="font-size: 0.78rem;">Aucun chiffre externe ajouté ; chiffres paper ancrés par lignes, chiffres E5 marqués comme mesures internes.</p></div>
-                    <div class="warning-box" style="padding: 0.75rem 0.9rem;"><div class="warning-box-title">Repo</div><p style="font-size: 0.78rem;">Travail E5 : repo iot-edge-ai-seizeit2. Questions attendues : LOSO, domain shift, SRAM, FPR.</p></div>
+                    <div class="info-box" style="padding: 0.75rem 0.9rem;">
+                        <div class="info-box-title">Source refs</div>
+                        <p style="font-size: 0.78rem;">Les 17 références correspondent à la section F de la lecture
+                            critique et aux lignes bibliographiques du paper. <small><em>(L.408-464)</em></small></p>
+                    </div>
+                    <div class="success-box" style="padding: 0.75rem 0.9rem;">
+                        <div class="success-box-title">Trace IA</div>
+                        <p style="font-size: 0.78rem;">Aucun chiffre externe ajouté ; chiffres paper ancrés par lignes,
+                            chiffres E5 marqués comme mesures internes.</p>
+                    </div>
+                    <div class="warning-box" style="padding: 0.75rem 0.9rem;">
+                        <div class="warning-box-title">Repo</div>
+                        <p style="font-size: 0.78rem;">Travail E5 : repo iot-edge-ai-seizeit2. Questions attendues :
+                            LOSO, domain shift, SRAM, FPR.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1756,7 +2143,7 @@
     <div class="progress-bar">
         <div class="progress-fill" id="progress-fill"></div>
     </div>
-<script>
+    <script>
         const slides = document.querySelectorAll('.slide');
         const totalSlides = slides.length;
         let currentSlide = 0;
